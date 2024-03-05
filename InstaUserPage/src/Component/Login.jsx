@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ showRegister }) {
   return (
-    <div className="w-full bg-blue-200 flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="w-full min-h-screen bg-blue-200 flex flex-col justify-center px-6 py-12 lg:px-8">
       <div className=" mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <div className="w-82 text-center items-center h-full mt-10 text-gray-400 bg-cover rounded-lg px-8 py-4 space-y-2 bg-[url('https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=1060&t=st=1683095309~exp=1683095909~hmac=1ec912f62a653077dde52545585cbe13da3dca6d279b116cf50f11443a811434')]">
-          <span className="text-black mt-10 text-2xl font-bold leading-9 tracking-tight items-center italic">
-            Intagram
-          </span>
+          <img className="w-50 h-12 m-auto" src="/8n91YnfPq0s.png" alt="" />
           <form action="#" className="space-y-6">
             <input
               type="text"
@@ -25,11 +23,19 @@ function Login() {
               Sign in
             </button>
             <span className="w-full mt-3 text-black text-center">
-              Don't have an account?
-              <a
-                href="#"
+              Don't have an account?&nbsp;
+              {/* <Link
+                to="/register"
                 className="text-center underline text-blue-500 cursor-pointer"
-              >Sign Up</a>
+              >
+                Sign Up
+              </Link> */}
+              <button
+                className="text-center underline text-blue-500 cursor-pointer"
+                onClick={showRegister}
+              >
+                Sign Up
+              </button>
             </span>
           </form>
         </div>
