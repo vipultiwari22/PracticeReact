@@ -1,11 +1,11 @@
+import { useState } from "react";
 import "./App.css";
+import Login from "./Component/Login";
+import Register from "./Component/Register";
 
 function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello World!</h1>
-    </>
-  );
+  const [showLogin, setshowLogin] = useState("");
+  return <>{showLogin ? <Login /> : <Register />}</>;
 }
 
 export default App;
