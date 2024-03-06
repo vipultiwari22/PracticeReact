@@ -24,6 +24,7 @@ body {
 img {
   height: 300px;
   width: 300px;
+  border-radius: 10px;
 }
 h1 {
   font-weight: bold;
@@ -59,34 +60,40 @@ span {
   color: white;
 }
 /* Modol */
-/* .modol-caontainer {
-  height: 100vh;
-  width: 100%;
-} */
 form {
   position: relative;
-  top: 50%;
+  top: 0;
   left: 50%;
-  padding: 30px;
-  transform: translate(-50%, -50%);
-  height: auto;
+  padding: 40px;
+  transform: translate(-50%, -100%);
+  height: 40%;
   width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   border-radius: 10px;
   background-color: aliceblue;
-  box-shadow: 5px 5px 15px 15px white;
+  display: none;
+  animation: Modol ease 1s forwards; /* Apply the animation */
 }
-input,
+
+@keyframes Modol {
+  to {
+    top: 0;
+  }
+  from {
+    top: 50%;
+  }
+}
+form .input,
 textarea {
   height: 40px;
   width: 100%;
   border: 0.5px solid gray;
   border-radius: 5px;
   font-size: 14px;
+  margin-top: 20px;
 }
-textarea {
+form .textarea {
   height: auto;
 }
 form button {
@@ -101,7 +108,56 @@ form button:hover {
   color: white;
   border: none;
 }
-.Cross {
+form .Cross {
   text-align: right;
   color: blue;
+  cursor: pointer;
+}
+/* Blog About Satrt */
+.blog-conatiner {
+  height: auto;
+  width: 100%;
+  background-color: aliceblue;
+  display: none;
+}
+.show {
+  display: block;
+}
+.blog-conatiner .cross {
+  text-align: right;
+  width: 100%;
+  background-color: rgb(92, 92, 245);
+  border-radius: 10px;
+  position: relative;
+  top: 20%;
+  transform: translate(0%, 30%);
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+.blog-person-details {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(92, 92, 245);
+  border-radius: 10px;
+  color: white;
+}
+.details1 p h1 {
+  width: 50%;
+  margin-top: 10px;
+  text-align: justify;
+}
+.blog-person-about {
+  height: auto;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+.about {
+  text-align: justify;
 }
