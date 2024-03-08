@@ -4,9 +4,9 @@ let search = document.querySelector(".search");
 console.log(search);
 
 let fetchMovie = async (url) => {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
 
     // Check if response is successful
     if (data.Response === "True") {
