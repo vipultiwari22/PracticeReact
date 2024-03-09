@@ -1,11 +1,8 @@
-import { useState } from "react";
-import "./App.css";
 import Gallary from "./Component/Gallary/Gallary";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ImageId from "./Component/ImageById/ImageId";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
