@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import imageApi from "../Apis/image.api.js";
+import { Link } from "react-router-dom";
+
 
 function Gallery() {
   const [images, setImages] = useState([]);
@@ -35,15 +37,15 @@ function Gallery() {
 
   return (
     <>
-      <div className="md:w-full min-h-screen grid gap-5 p-5 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      <div className="md:w-full min-h-screen grid gap-5 p-5 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {images.map((img, index) => (
-          <div key={index} className="w-full h-full rounded-2xl">
+          <Link key={index} to={`/image/${index + 1}`}>
             <img
               src={img.src}
               alt={`Image ${index}`}
               className="w-full h-full object-cover rounded-2xl"
             />
-          </div>
+          </Link>
         ))}
       </div>
       <div className="w-full h-auto text-white text-center rounded md:flex  justify-around items-center">
