@@ -1,3 +1,5 @@
+//  This file gettting tha data from upi and get the user follwers 
+//  We are not use this file bcuz it will go to reac the limit of the api request of the github
 async function UserDatas() {
   const url = "https://api.github.com/users";
   const response = await fetch(url);
@@ -39,4 +41,6 @@ async function getUserData() {
     });
   }
 }
-export { UserDatas, getUserData };
+// export { UserDatas, getUserData };
+
+
